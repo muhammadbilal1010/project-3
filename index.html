@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#65c7ea" />
+    <title>Flappy Sky</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Flappy Sky home"><span class="brand-bird">●</span> FLAPPY <em>SKY</em></a>
+        <button class="sound-button" id="soundButton" aria-label="Toggle sound" title="Toggle sound">♫ <span>SOUND ON</span></button>
+      </header>
+
+      <section class="game-layout" aria-label="Flappy Sky game">
+        <aside class="info-card">
+          <span class="card-icon">⌁</span>
+          <h2>How to fly</h2>
+          <p>Press <kbd>SPACE</kbd>, click, or tap to flap your wings.</p>
+          <p>Glide through the pipes and chase a new high score!</p>
+        </aside>
+
+        <div class="game-frame">
+          <canvas id="game" width="420" height="640" aria-label="Flappy Bird game canvas"></canvas>
+          <div class="game-overlay" id="startOverlay">
+            <div class="bird-badge">●</div>
+            <h1>WELCOME TO<br /><span>FLAPPY BIRD</span></h1>
+            <p>Ready to spread your wings?</p>
+            <div class="home-actions">
+              <button class="play-button" id="playButton">START GAME <b>›</b></button>
+              <button class="exit-button" id="exitButton">EXIT GAME</button>
+            </div>
+            <small>Press space to start</small>
+          </div>
+          <div class="game-overlay hidden" id="gameOverOverlay">
+            <div class="medal">★</div>
+            <h1>GAME OVER</h1>
+            <div class="score-card"><span>SCORE</span><strong id="finalScore">0</strong><span>BEST <b id="finalBest">0</b></span></div>
+            <button class="play-button" id="restartButton">FLY AGAIN <b>↻</b></button>
+          </div>
+          <div class="game-overlay hidden" id="exitOverlay">
+            <div class="medal goodbye">♥</div>
+            <h1>SEE YOU<br /><span>SOON!</span></h1>
+            <p>Thanks for flying with us.</p>
+            <button class="play-button" id="homeButton">BACK TO HOME</button>
+          </div>
+        </div>
+
+        <aside class="info-card score-panel">
+          <span class="card-icon">★</span>
+          <h2>Your best</h2>
+          <div class="best-score" id="sideBest">0</div>
+          <p>Keep flying — every pipe counts!</p>
+        </aside>
+      </section>
+
+      <footer>MADE FOR LITTLE MOMENTS OF JOY <span>♥</span></footer>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
