@@ -1,6 +1,6 @@
 :root { --ink:#18344b; --blue:#65c7ea; --orange:#ffb62f; --pink:#ff6d7b; --green:#75bf50; }
-* { box-sizing:border-box; }
-body { margin:0; min-height:100vh; color:var(--ink); font-family:'Nunito',sans-serif; background:radial-gradient(circle at 50% 15%,#fffde9 0 18%,transparent 40%),linear-gradient(135deg,#effaff 0%,#fff8dc 100%); }
+* { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+body { margin:0; min-height:100vh; color:var(--ink); font-family:'Nunito',sans-serif; background:radial-gradient(circle at 50% 15%,#fffde9 0 18%,transparent 40%),linear-gradient(135deg,#effaff 0%,#fff8dc 100%); user-select:none; -webkit-user-select:none; }
 .page-shell { width:min(1120px,100%); min-height:100vh; margin:auto; padding:24px 28px 16px; display:flex; flex-direction:column; }
 .topbar { display:flex; align-items:center; justify-content:space-between; margin-bottom:16px; }
 .brand { text-decoration:none; color:var(--ink); font-family:'Baloo 2',sans-serif; font-weight:800; font-size:25px; letter-spacing:1px; }
@@ -8,7 +8,7 @@ body { margin:0; min-height:100vh; color:var(--ink); font-family:'Nunito',sans-s
 .sound-button { border:0; border-radius:99px; padding:10px 16px; color:#397a8f; background:#e8f8fb; font:800 12px 'Nunito',sans-serif; letter-spacing:.4px; cursor:pointer; transition:.2s; }.sound-button:hover { transform:translateY(-2px); background:#d8f3f8; }
 .game-layout { flex:1; display:grid; grid-template-columns:180px minmax(320px,420px) 180px; gap:32px; justify-content:center; align-items:center; }
 .game-frame { width:100%; position:relative; overflow:hidden; border:8px solid white; border-radius:26px; box-shadow:0 18px 38px #36687a30,0 2px 0 #c5e7ef; background:#7cd5ef; }
-canvas { width:100%; display:block; aspect-ratio:21/32; cursor:pointer; touch-action:manipulation; }
+canvas { width:100%; display:block; aspect-ratio:21/32; cursor:pointer; touch-action:manipulation; user-select:none; -webkit-user-select:none; -webkit-touch-callout:none; }
 .game-overlay { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; background:linear-gradient(#68ccea25,#f2d76824); transition:opacity .2s; }.hidden { opacity:0; pointer-events:none; }
 .game-overlay h1 { margin:5px 0 8px; color:white; font:800 49px/.75 'Baloo 2',sans-serif; letter-spacing:2px; -webkit-text-stroke:2px #23657e; text-shadow:0 4px #23657e; }.game-overlay h1 span { color:#ffc132; -webkit-text-stroke-color:#a7651e; text-shadow:0 4px #a7651e; }
 .game-overlay p { margin:14px 0; color:white; font-size:17px; text-shadow:0 2px 3px #397a8f; }.bird-badge,.medal { width:60px;height:60px;display:grid;place-items:center;border-radius:50%;background:#ffbf2e;border:4px solid white;box-shadow:0 4px #b66f22;color:#f36c6f;font-size:38px; }.medal { font-size:30px;color:white; }
